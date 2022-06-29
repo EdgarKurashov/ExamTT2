@@ -18,7 +18,9 @@
                 <a class="nav__link" href="/Rules">Rules</a>
                 <a class="nav__link" href="/Contact">Contact</a>
                 <a class="nav__link" href="/registration">Registration</a>
-                <a class="nav__link" href="route('inner')">Inner</a>
+                <a class="nav__link" href="/login">Login</a>
+                <a class="nav__link" href="/inner">Inner</a>
+                <a class="nav__link" href="/logout">Logout</a>
             </nav>
         </div>
     </div>

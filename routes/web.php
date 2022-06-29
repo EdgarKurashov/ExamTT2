@@ -4,11 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Auth;
 
+Route::redirect('/','/en');
+
+
+
 Route::get('/', [MainController::class, 'home']);
 Route::get('/registration', [MainController::class, 'registration']);
 Route::get('/inner', function(){
     return view('inner');
 })->middleware('auth')->name('inner');
+
+Route::get('/logout', function(){
+    return view('logout');
+})->middleware('auth')->name('logout');
+
+//Route::group(['prefix'=>'{language}'], function() {
 
 Route::name('user.')->group(function(){
     Route::view('/private','private')->middleware('auth')->name('private');
@@ -36,3 +46,4 @@ Route::name('user.')->group(function(){
 
     Route::post('/registration',[\App\Http\Controllers\RegisterController::class, 'save']);
 });
+//});

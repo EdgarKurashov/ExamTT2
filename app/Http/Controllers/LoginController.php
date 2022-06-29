@@ -22,7 +22,7 @@ class LoginController extends Controller
         }
 
         return redirect(route('user.login'))->withErrors([
-            'email'=> "Authorization is not succesful"
+            'email'=> "Authorization is not succesfull"
         ]);
     }
 }

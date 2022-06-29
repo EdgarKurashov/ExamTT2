@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 
-.intro__suptitle {
+.intro__subtitle {
     margin-bottom: 20px;
     margin-top: 15%;
     font-family: 'Kaushan Script', cursive;
@@ -259,7 +259,6 @@ p:hover{
 
 /*Form*/
 
-
  iframe{
      text-align: right;
      margin-top: 0;
@@ -286,12 +285,10 @@ p:hover{
      text-transform: uppercase;
      text-decoration: none;
  }
-
  .submit:hover {
      background-color: #fff;
      color: #333;
      cursor: pointer;
-
  }
  .contact{
      box-sizing: border-box;
@@ -327,7 +324,6 @@ p:hover{
     height: 70%;
     text-align: center;
   }
-
   #img1:hover ,#img2:hover,#img3:hover {
       opacity: 0.5;
   }
