@@ -1,4 +1,5 @@
 *.sqlite*
+<<<<<<< HEAD
 /vendor/
 node_modules/
 npm-debug.log
@@ -22,3 +23,5 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+=======
+>>>>>>> 7846b8fb49762923d121b20570619038da79e5dd
