@@ -9,6 +9,20 @@ Route::redirect('/','/en');
 
 
 Route::get('/', [MainController::class, 'home']);
+
+
+
+Route::get('/test',function(){
+    App::setlocale('lv');
+
+    if (App::isLocale('lv')){
+          dd(App::getLocale());
+    }
+
+});
+
+
+
 Route::get('/registration', [MainController::class, 'registration']);
 Route::get('/inner', function(){
     return view('inner');
@@ -46,4 +60,5 @@ Route::name('user.')->group(function(){
 
     Route::post('/registration',[\App\Http\Controllers\RegisterController::class, 'save']);
 });
+
 //});
