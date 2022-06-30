@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="{{ asset('style.css') }}" rel="stylesheet" type="text/css" >
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <title>Chillzone</title>
 </head>
