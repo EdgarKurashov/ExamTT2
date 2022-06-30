@@ -1,5 +1,5 @@
 <x-layout>
-<form class="col-3 offset-4 border rounded" method="POST" action="{{ route('user.registration')}}">
+<form class="col-3 offset-4 border rounded" method="POST" action="{{ route('user.registration',app()->getLocale())}}">
     @csrf
 
 

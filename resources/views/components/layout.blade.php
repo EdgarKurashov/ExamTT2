@@ -10,17 +10,17 @@
     <header class="header">
     <div class="container">
         <div class="header__inner">
-            <div class="header__logo"><a href="/">Chillzone</a></div>
+            <div class="header__logo"><a href="/">{{ __('Chillzone') }}</a></div>
 
             <nav class="nav">
-                <a class="nav__link active" href="/">Home</a>
-                <a class="nav__link" href="/Games">Games</a>
-                <a class="nav__link" href="/Rules">Rules</a>
-                <a class="nav__link" href="/Contact">Contact</a>
-                <a class="nav__link" href="/registration">Registration</a>
-                <a class="nav__link" href="/login">Login</a>
-                <a class="nav__link" href="/inner">Inner</a>
-                <a class="nav__link" href="/logout">Logout</a>
+                <a class="nav__link active" href="/">{{ __('Home') }}</a>
+                <a class="nav__link" href="/Games">{{ __('Games') }}</a>
+                <a class="nav__link" href="/Rules">{{ __('Rules') }}</a>
+                <a class="nav__link" href="/Contact">{{ __('Contact') }}</a>
+                <a class="nav__link" href="{{route('user.registration',app()->getLocale())  }}">{{ __('Registration') }}</a>
+                <a class="nav__link" href="{{route('user.login',app()->getLocale()) }}">{{ __('Login') }}</a>
+                <a class="nav__link" href="/inner">{{ __('Inner') }}</a>
+                <a class="nav__link" href="/logout">{{ __('Logout') }}</a>
             </nav>
         </div>
     </div>
