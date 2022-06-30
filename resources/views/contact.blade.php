@@ -13,7 +13,7 @@
       <div class="Form">
       @csrf
 
-        <form id=form>
+        <form class="contactForm" id=form>
           <label for="NorN">Your Name:</label>
           <input type="text" id="NorN" name="NorN" placeholder="Name or Nickname">
           <br>

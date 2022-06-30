@@ -16,19 +16,22 @@
             <nav class="nav">
                 <a class="nav__link active" href="/">{{ __('Home') }}</a>
                 <a class="nav__link" href="/Games">{{ __('Games') }}</a>
-                <a class="nav__link" href="/Rules">{{ __('Rules') }}</a>
-                <a class="nav__link" href="/Contact">{{ __('Contact') }}</a>
+                <a class="nav__link" href="{{route('rules', app()->getLocale()) }}">{{ __('Rules') }}</a>
+                <a class="nav__link" href="{{route('contact', app()->getLocale()) }}">{{ __('Contact') }}</a>
+                @if (!Auth::check())
                 <a class="nav__link" href="{{route('user.registration',app()->getLocale()) }}">{{ __('Registration') }}</a>
                 <a class="nav__link" href="{{route('user.login',app()->getLocale()) }}">{{ __('Login') }}</a>
-                <a class="nav__link" href="/inner">{{ __('Inner') }}</a>
+                @else
+                <a class="nav__link" href="{{route('user.private',app()->getLocale()) }}">{{ __('My Profile') }}</a>
                 <a class="nav__link" href="{{ route('user.logout', app()->getLocale()) }}">{{ __('Logout') }}</a>
-                <a class="nav__link" href ="{{Route::currentRouteName(), 'en' }}" class="nav-link">EN</a>
-                <a class="nav__link" href ="{{Route::currentRouteName(), 'lv' }}" class="nav-link">LV</a>
+                @endif
+                <a class="nav__link" href ="/en" class="nav-link">EN</a>
+                <a class="nav__link" href ="/lv" class="nav-link">LV</a>
             </nav>
         </div>
     </div>
 </header>
-<script src="./js/Scripts.js"></script>
+<script src="{{ asset('Scripts.js') }}"></script>
 {{$slot}}
 </body>
 </html>

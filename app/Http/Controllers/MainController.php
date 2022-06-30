@@ -11,6 +11,14 @@ class MainController extends Controller
     return view('home');
 
    }
+   public function contact(){
+
+    return view('contact');
+ }
+ public function rules(){
+
+    return view('rules');
+ }
    public function registration(){
 
       return view('registration');
@@ -23,4 +31,6 @@ class MainController extends Controller
 
     return view('logout');
  }
+
+
 }

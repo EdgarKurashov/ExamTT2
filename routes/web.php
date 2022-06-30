@@ -4,36 +4,38 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Auth;
 
-Route::redirect('/','/en');
+Route::redirect('/', '/en');
+
+
 Route::group(['prefix'=>'{language}'], function () {
-
-
-
 
 Route::get('/', [MainController::class, 'home']);
 
-
-
-
-
 Route::get('/registration', [MainController::class, 'registration']);
 
-Route::get('/inner', function(){
-    return view('inner');
-})->middleware('auth')->name('inner');
+Route::get('/private', function(){
+    return view('private');
+})->middleware('auth')->name('private');
 
 Route::get('/logout', function(){
-    return view('logout');
+    return view('logout' );
 })->middleware('auth')->name('logout');
 
 
+Route::name('contact')->group(function(){
+  Route::get('/contact', [MainController::class, 'contact']);
+});
+Route::name('rules')->group(function(){
+    Route::get('/rules', [MainController::class, 'rules']);
+  });
 
 Route::name('user.')->group(function(){
+
     Route::view('/private','private')->middleware('auth')->name('private');
 
     Route::get('/login', function(){
         if(Auth::check()){
-            return redirect(route('user.private'));
+            return redirect(route('user.private',app()->getLocale()));
         }
         return view('login');
     })->name('login');
@@ -47,10 +49,12 @@ Route::name('user.')->group(function(){
 
     Route::get('/registration',function(){
     if(Auth::check()){
-        return redirect(route('user.private'));
+        return redirect(route('user.private',app()->getLocale()));
     }
         return view('registration');
     })->name('registration');
+
+
 
     Route::post('/registration',[\App\Http\Controllers\RegisterController::class, 'save']);
 });
