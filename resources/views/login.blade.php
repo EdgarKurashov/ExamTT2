@@ -1,5 +1,5 @@
 <x-layout>
-<form class="col-3 offset-4 border rounded" method="POST" actlon="{{ route('user.login',app()->getLocale())}}">
+<form class="regForm" method="POST" method="POST" actlon="{{ route('user.login',app()->getLocale())}}">
     @csrf
 <div class="form-group">
 <label for="email" class="col-form-label-lg">{{ __('Your email') }}</label>
