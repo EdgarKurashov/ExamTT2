@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Auth;
+
 Route::redirect('/','/en');
 Route::group(['prefix'=>'{language}'], function () {
 
@@ -16,6 +17,7 @@ Route::get('/', [MainController::class, 'home']);
 
 
 Route::get('/registration', [MainController::class, 'registration']);
+
 Route::get('/inner', function(){
     return view('inner');
 })->middleware('auth')->name('inner');
