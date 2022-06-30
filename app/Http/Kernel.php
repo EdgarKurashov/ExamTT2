@@ -36,10 +36,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-<<<<<<< HEAD
-=======
             \App\Http\Middleware\setLanguage::class,
->>>>>>> 283d1d99558c01c5864a59bd6029dd5995b5688d
         ],
 
         'api' => [
