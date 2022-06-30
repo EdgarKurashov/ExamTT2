@@ -349,3 +349,6 @@ p:hover{
     border-style: solid;
     box-sizing: border-box;
 }
+.contactForm{
+    margin-left: 30%;
+}

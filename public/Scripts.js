@@ -19,7 +19,7 @@ function checkvalue(val) {
 
 
 function AboutInfo() {
-    alert("This site is created by Alexey Gerasimov for demonstration of Practical assignment!");
+    alert("Created by Alexey Gerasimov and Edgar Kurashov for demonstration of Practical assignment!");
 }
 
 

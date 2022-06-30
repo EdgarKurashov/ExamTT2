@@ -8,7 +8,7 @@
 <br>
 <input class="form-control" id="username" name="username" type="text" value="" placeholder="Username">
 @error('username')
-<div class="alert alert-danger">{{ $message }}</div>
+<div class="alert">{{ $message }}</div>
 @enderror
 </div>
 
@@ -17,7 +17,7 @@
 <br>
 <input class="form-control" id="email" name="email" type="text" value="" placeholder="Email">
 @error('email')
-<div class="alert alert-danger">{{ $message }}</div>
+<div class="alert">{{ $message }}</div>
 @enderror
 </div>
 
@@ -26,7 +26,7 @@
 <br>
 <input class="form-control" id="password" name="password" type="password" value="" placeholder="Password">
 @error('password')
-<div class="alert alert-danger"> {{$message }}</div>
+<div class="alert"> {{$message }}</div>
 @enderror
 </div>
 

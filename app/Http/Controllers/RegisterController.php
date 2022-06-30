@@ -14,7 +14,7 @@ class RegisterController extends Controller
     public function save(Request $request)
     {
         if(Auth::check()){
-            return redirect(route('user.private'));
+            return redirect(route('user.private',app()->getLocale()));
         }
 
         $validateFields = $request->validate([
@@ -23,12 +23,12 @@ class RegisterController extends Controller
             'password' => 'required|min:6|max:255'
         ]);
         if(User::where('username',$validateFields['username'])->exists()){
-            return redirect(route('user.registration'))->withErrors([
+            return redirect(route('user.registration',app()->getLocale()))->withErrors([
             'username'=>'User with this username already is registered'
             ]);
         }
         if(User::where('email',$validateFields['email'])->exists()){
-            return redirect(route('user.registration'))->withErrors([
+            return redirect(route('user.registration',app()->getLocale()))->withErrors([
             'email'=>'User with this email already is registered'
             ]);
         }
@@ -38,10 +38,10 @@ class RegisterController extends Controller
         $user = User::create($validateFields);
         if($user){
             Auth::login($user);
-            return redirect(route('user.private'));
+            return redirect(route('user.private',app()->getLocale()));
         }
 
-        return redirect(route('user.login'))->withErrors([
+        return redirect(route('user.login',app()->getLocale()))->withErrors([
             'formError'=>'Error occured trying to save user'
         ]);
     }
