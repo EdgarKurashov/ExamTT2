@@ -21,7 +21,7 @@
                 <a class="nav__link" href="{{route('user.registration',app()->getLocale()) }}">{{ __('Registration') }}</a>
                 <a class="nav__link" href="{{route('user.login',app()->getLocale()) }}">{{ __('Login') }}</a>
                 <a class="nav__link" href="/inner">{{ __('Inner') }}</a>
-                <a class="nav__link" href="/logout">{{ __('Logout') }}</a>
+                <a class="nav__link" href="{{ route('user.logout', app()->getLocale()) }}">{{ __('Logout') }}</a>
             </nav>
         </div>
     </div>
