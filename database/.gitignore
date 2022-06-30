@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 /vendor/
 node_modules/
 npm-debug.log
@@ -24,3 +26,4 @@ Homestead.json
 .phpunit.result.cache
 =======
 >>>>>>> 7846b8fb49762923d121b20570619038da79e5dd
+>>>>>>> 283d1d99558c01c5864a59bd6029dd5995b5688d

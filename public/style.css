@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 
-.intro__suptitle {
+.intro__subtitle {
     margin-bottom: 20px;
     margin-top: 15%;
     font-family: 'Kaushan Script', cursive;
@@ -259,14 +259,6 @@ p:hover{
 
 /*Form*/
 
-form{
-    text-align: center;
-     margin-right: 60%;
-     margin-left: 30%;
-     font: size 40px;
-     margin-top: 5%;
-     border-radius: 15px;
- }
  iframe{
      text-align: right;
      margin-top: 0;
@@ -281,11 +273,10 @@ form{
      box-sizing: border-box;
      text-align: center;
      border-radius: 10px;
- 
+
  }
  .submit{
      background-color: #f38181;
-     margin-left: 15%;
      display: inline-block;
      border: 3px solid #fff;
      font-size: 14px;
@@ -294,12 +285,10 @@ form{
      text-transform: uppercase;
      text-decoration: none;
  }
- 
  .submit:hover {
      background-color: #fff;
      color: #333;
      cursor: pointer;
- 
  }
  .contact{
      box-sizing: border-box;
@@ -309,8 +298,8 @@ form{
  textarea{
      height:200px;
  }
- 
- 
+
+
 
 #content{
     width: 100%;
@@ -319,23 +308,22 @@ form{
     float: left;
     color: black;
     margin-top: 120px;
-  
+
   }
-  
+
   div.gallery {
-    
-    margin-left: 100px;  
+
+    margin-left: 100px;
     float: center;
-  
+
     color: white;
   }
-  
+
   div.gallery img {
     width: 70%;
     height: 70%;
     text-align: center;
   }
-  
   #img1:hover ,#img2:hover,#img3:hover {
       opacity: 0.5;
   }
@@ -348,5 +336,16 @@ form{
       text-align: center;
       margin-right: 7%;
   }
-  
-  
+
+
+.regForm{
+
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+    border-width: 2px;
+    border-color: #333;
+    border-image: auto;
+    border-style: solid;
+    box-sizing: border-box;
+}

@@ -22,15 +22,14 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255|unique:users,email',
             'password' => 'required|min:6|max:255'
         ]);
-
         if(User::where('username',$validateFields['username'])->exists()){
             return redirect(route('user.registration'))->withErrors([
-            'username'=>'User with this username already is registrated'
+            'username'=>'User with this username already is registered'
             ]);
         }
         if(User::where('email',$validateFields['email'])->exists()){
             return redirect(route('user.registration'))->withErrors([
-            'email'=>'User with this email already is registrated'
+            'email'=>'User with this email already is registered'
             ]);
         }
 

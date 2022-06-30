@@ -18,7 +18,11 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
+<<<<<<< HEAD
+            'username' => $this->faker->name(),
+=======
             'name' => $this->faker->name(),
+>>>>>>> 283d1d99558c01c5864a59bd6029dd5995b5688d
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
