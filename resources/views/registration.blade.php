@@ -1,5 +1,6 @@
 <x-layout>
-<form class="regForm" method="POST" action="{{ route('user.registration')}}">
+
+<form class="regForm" method="POST"" method="POST" action="{{ route('user.registration',app()->getLocale())}}">
     @csrf
 
 <div class="form-group">
