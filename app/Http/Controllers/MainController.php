@@ -15,6 +15,10 @@ class MainController extends Controller
 
     return view('contact');
  }
+ public function news(){
+
+    return view('news');
+ }
  public function rules(){
 
     return view('rules');

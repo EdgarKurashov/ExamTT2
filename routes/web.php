@@ -28,6 +28,9 @@ Route::name('contact')->group(function(){
 Route::name('rules')->group(function(){
     Route::get('/rules', [MainController::class, 'rules']);
   });
+  Route::name('news')->group(function(){
+    Route::get('/news', [MainController::class, 'news']);
+  });
 
 Route::name('user.')->group(function(){
 

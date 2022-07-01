@@ -15,7 +15,7 @@
 
             <nav class="nav">
                 <a class="nav__link active" href="/">{{ __('Home') }}</a>
-                <a class="nav__link" href="/Games">{{ __('Games') }}</a>
+                <a class="nav__link" href="{{route('news', app()->getLocale()) }}">{{ __('News') }}</a>
                 <a class="nav__link" href="{{route('rules', app()->getLocale()) }}">{{ __('Rules') }}</a>
                 <a class="nav__link" href="{{route('contact', app()->getLocale()) }}">{{ __('Contact') }}</a>
                 @if (!Auth::check())
