@@ -6,6 +6,11 @@ use Illuminate\Support\Facades\Auth;
 
 Route::redirect('/', '/en');
 
+Route::resource('posts','PostController');
+Route::get('/news', function(){
+    return redirect('/posts');
+})->name('post');
+
 
 Route::group(['prefix'=>'{language}'], function () {
 
