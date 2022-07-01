@@ -13,27 +13,26 @@
       <div class="Form">
       @csrf
 
-        <form class="contactForm" id=form>
+        <form method='post' action='/contact/check' class="contactForm" id=form>
           <label for="NorN">{{ __('Your name:') }}</label>
           <input type="text" id="NorN" name="NorN" placeholder="Name or Nickname">
           <br>
           <label for="Email:">{{ __('Your email adress:') }}</label>
-          <input type="email" id="email" name="email" placeholder="Example@example.com" required value="{{ old('email') }}">
-          @error('email')
+          <input type="ContEmail" id="ContEmail" name="ContEmail" placeholder="Example@example.com" required value="{{ old('email') }}">
+          @error('ContEmail')
                     <p>{{ $message }}</p>
                     @enderror
           <br>
           <label for="Problem">{{ __('Theme') }}</label>
-          <select id="Theme" name="Theme" onchange="checkvalue(this.value)">
-            <option value="Comment">{{ __('Review') }}</option>
-            <option value="Site work">{{ __('Site work') }}</option>
-            <option value="Other">{{ __('Other') }}</option>
+          <select id="Problem" name="Problem" onchange="checkvalue(this.value)">
+            <option value="Problem">{{ __('Review') }}</option>
+            <option value="Problem">{{ __('Site work') }}</option>
+            <option value="Problem">{{ __('Other') }}</option>
           </select>
-          <input type="text" name="Other" id="Other" style='display:none;' />
           <br>
-          <label for="Review">{{ __('Some comment') }}</label>
+          <label for="Problem">{{ __('Some comment') }}</label>
           <br>
-          <textarea id="Review" name="Review" placeholder="Your text..."></textarea>
+          <textarea id="message" name="message" placeholder="Your text..."></textarea>
           <br>
         <button type='submit'>{{ __('Submit') }}</button>
         </form>
